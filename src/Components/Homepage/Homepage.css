@@ -2,6 +2,7 @@
 INDICE
 1. General Styles & Animation
 2. Header section
+3. Menu section
 
 */
 
@@ -88,6 +89,7 @@ INDICE
   letter-spacing: 0.24rem;
   border-radius: 3px;
   font-family: "Sogo", sans-serif;
+  margin-top: 30px;
 }
 /* 2.5 button scorri */
 
@@ -109,7 +111,7 @@ INDICE
   animation: fadeIn 2s ease-in-out;
 }
 
-.header-section.scroll-down-indicator svg {
+.header-section .scroll-down-indicator svg {
   animation: bounce 2s infinite;
 }
 
@@ -136,5 +138,81 @@ INDICE
   }
   .header-section button {
     font-size: 1rem;
+  }
+}
+
+/* 3.---------------------MENU SECTION------------------------- 
+3.1 general
+3.2 titoli
+3.3 cards
+3.4 Media Queries 
+*/
+/* 3.1 general */
+.menu-section {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Sogo", sans-serif;
+  color: #382f2d;
+}
+/* 3.2 titoli */
+.menu-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.menu-section h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.menu-section h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #382f2d;
+  margin: 20px auto 0;
+}
+.menu-section h4 {
+  color: #382f2d;
+  text-decoration: #382f2d underline;
+}
+/* 3.3 cards */
+.card-menu {
+  display: flex;
+  gap: 30px;
+
+  background: #f6f3f1;
+  padding: 20px;
+}
+.card-menu img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-menu .card-text h5 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+/* 3.4 Media Queries */
+/* mobile (768px) */
+@media (max-width: 768px) {
+  .card-menu img {
+    max-width: 130px;
+    max-height: 130px;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .card-menu p {
+    font-size: 0.9rem;
+  }
+  .menu-section h1 {
+    font-size: 1.7rem;
+  }
+  .menu-section h3 {
+    font-size: 1.3rem;
   }
 }

@@ -1,12 +1,21 @@
 import React from "react";
 import "./Homepage.css";
+import { Col, Container, Row } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //immagini
 import homeImg from "../../Assets/Home/Isolotto-Pirgo-6.jpg";
+import antipastoDiMare from "../../Assets/Menu/Antipasto-di-pesce-scaled.jpg";
+import antipastoDiTerra from "../../Assets/Menu/antipasto-di-terra-invernale.jpg";
+
 const Homepage = () => {
   return (
     <>
-      {/* HEADER SECTION */}
+      {/* INDICE HTML
+    1. HEADER SECTION
+    2. MENU SECTION
+    */}
+      {/* --------1. HEADER SECTION------------- */}
       <div className="header-section">
         <img src={homeImg} alt="" />
         <div className="title">
@@ -38,7 +47,100 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      {/**/}
+      {/* -------2. MENU SECTION------------- 
+      2.1 Piatti
+      2.2 Bevande
+      */}
+
+      <div className="menu-section">
+        <Container>
+          <h1>&bull; Menu &bull;</h1>
+
+          {/* 2.1 PIATTI */}
+          <Row className="g-4">
+            <h3>I Nostri Piatti</h3>
+            <Col xs={12} md={6}>
+              <div className="card-menu">
+                {" "}
+                <img src={antipastoDiMare} alt="Antipasto Di Mare" />
+                <div className="card-text">
+                  <h5>Antipasto Di Mare</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </Col>
+            <Col xs={12} md={6}>
+              <div className="card-menu">
+                <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
+
+                <div className="card-text">
+                  <h5>Antipasto Di Terra</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          {/* 2.2 BEVANDE */}
+          <Row className="mt-5 g-4">
+            <h3>I Nostri Vini</h3>
+            <Col xs={12} md={4}>
+              {" "}
+              <div className="card-menu">
+                <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
+
+                <div className="card-text">
+                  <h5>Antipasto Di Terra</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              {" "}
+              <div className="card-menu">
+                <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
+
+                <div className="card-text">
+                  <h5>Antipasto Di Terra</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              {" "}
+              <div className="card-menu">
+                <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
+
+                <div className="card-text">
+                  <h5>Antipasto Di Terra</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          <div className="text-end mt-4">
+            <a href="">
+              <h4>Vedi Menu Completo</h4>
+            </a>
+          </div>
+        </Container>
+      </div>
     </>
   );
 };
