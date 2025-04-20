@@ -3,6 +3,7 @@ INDICE
 1. General Styles & Animation
 2. Header section
 3. Menu section
+4. Eventi section
 
 */
 
@@ -149,8 +150,8 @@ INDICE
 */
 /* 3.1 general */
 .menu-section {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   font-family: "Sogo", sans-serif;
   color: #382f2d;
 }
@@ -214,5 +215,93 @@ INDICE
   }
   .menu-section h3 {
     font-size: 1.3rem;
+  }
+}
+
+/* 4. -------------------------EVENTI SECTION-------------------------
+4.1 general
+4.2 titoli
+4.3 cards
+4.4 Media Queries 
+*/
+/* 4.1 general */
+.eventi-section {
+  max-width: 95vw;
+  min-height: 100vh;
+  font-family: "Sogo", sans-serif;
+  color: #382f2d;
+  background: #382f2d;
+  border-radius: 10px;
+  margin: auto;
+}
+/* 4.2 titoli */
+.eventi-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  color: white;
+  border-bottom: 1px solid #f6f3f1;
+  padding-bottom: 3px;
+}
+.eventi-section h4 {
+  color: white;
+  text-decoration: white underline;
+}
+
+/* 4.3 cards */
+.eventi-section .card-eventi {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  background: #f6f3f1;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.eventi-section .card-eventi img {
+  width: 300px;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.eventi-section .card-eventi h3 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.eventi-section .card-eventi h5 {
+  font-size: 1.1rem;
+}
+.eventi-section .card-eventi p {
+  font-size: 1.2rem;
+}
+
+/* 4.4 Media Queries */
+/* mobile (768px) */
+@media (max-width: 768px) {
+  .eventi-section {
+    min-width: 100vw;
+  }
+  .eventi-section .card-eventi img {
+    max-width: 190px;
+  }
+  .eventi-section .card-eventi {
+    border-radius: 3px;
+  }
+  .eventi-section .card-eventi h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .eventi-section .card-eventi h5 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .eventi-section .card-eventi p {
+    font-size: 0.9rem;
+  }
+  .eventi-section h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }

@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import homeImg from "../../Assets/Home/Isolotto-Pirgo-6.jpg";
 import antipastoDiMare from "../../Assets/Menu/Antipasto-di-pesce-scaled.jpg";
 import antipastoDiTerra from "../../Assets/Menu/antipasto-di-terra-invernale.jpg";
+import evento from "../../Assets/Eventi/8698644_06191135_fondazione_felicita_c_2024.03.20_mattinoa_81_2_.jpg";
 
 const Homepage = () => {
   return (
@@ -14,6 +15,9 @@ const Homepage = () => {
       {/* INDICE HTML
     1. HEADER SECTION
     2. MENU SECTION
+    3. EVENTI SECTION
+    4. GALLERY SECTION
+
     */}
       {/* --------1. HEADER SECTION------------- */}
       <div className="header-section">
@@ -51,7 +55,6 @@ const Homepage = () => {
       2.1 Piatti
       2.2 Bevande
       */}
-
       <div className="menu-section">
         <Container>
           <h1>&bull; Menu &bull;</h1>
@@ -135,8 +138,59 @@ const Homepage = () => {
             </Col>
           </Row>
           <div className="text-end mt-4">
-            <a href="">
+            <a href="/">
               <h4>Vedi Menu Completo</h4>
+            </a>
+          </div>
+        </Container>
+      </div>
+      {/* -------3. EVENTI SECTION------------- */}
+      <div className="eventi-section">
+        <Container>
+          <h1>Eventi</h1>
+          <Row>
+            <Col xs={12} md={10} className="m-auto">
+              <div className="card-eventi">
+                <img src={evento} alt="" />
+                <div className="card-text">
+                  <h3>&bull; Evento 1</h3>
+                  <h5>Data : 15/10/2022</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              <div className="card-eventi">
+                <div className="card-text">
+                  <h3>&bull; Evento 2</h3>
+                  <h5>Data : 15/10/2022</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+                <img src={evento} alt="" />
+              </div>
+              <div className="card-eventi">
+                <img src={evento} alt="" />
+                <div className="card-text">
+                  <h3>&bull; Evento 3</h3>
+                  <h5>Data : 15/10/2022</h5>
+                  <hr />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          <div className="text-end mt-4">
+            <a href="/">
+              <h4>Vedi Tutti Gli Eventi In Programma</h4>
             </a>
           </div>
         </Container>
