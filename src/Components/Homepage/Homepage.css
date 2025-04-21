@@ -4,6 +4,7 @@ INDICE
 2. Header section
 3. Menu section
 4. Eventi section
+5. Gallery section
 
 */
 
@@ -51,18 +52,18 @@ INDICE
 /* 2.7 Media Queries */
 
 /* 2.1 general */
-.header-section {
+.hero-section {
   position: relative;
 }
 /* 2.2 immagine */
-.header-section img {
+.hero-section img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
   filter: brightness(70%);
 }
 /* 2.3 titoli */
-.header-section .title {
+.hero-section .title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -73,14 +74,14 @@ INDICE
   text-align: center;
   font-family: "Sogo", sans-serif;
 }
-.header-section h1 {
+.hero-section h1 {
   font-size: 3rem;
   letter-spacing: 2px;
   font-weight: 300;
 }
 
 /* 2.4 button prenota */
-.header-section button {
+.hero-section button {
   background: rgba(244, 244, 242, 0.7);
   backdrop-filter: blur(3px);
   border: 1px solid #382f2d;
@@ -94,13 +95,13 @@ INDICE
 }
 /* 2.5 button scorri */
 
-.header-section .arrow-down-sect {
+.hero-section .arrow-down-sect {
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-60%);
 }
-.header-section .scroll-down-indicator {
+.hero-section .scroll-down-indicator {
   width: 60px;
   height: 60px;
   background: rgba(255, 255, 255, 0.1);
@@ -112,7 +113,7 @@ INDICE
   animation: fadeIn 2s ease-in-out;
 }
 
-.header-section .scroll-down-indicator svg {
+.hero-section .scroll-down-indicator svg {
   animation: bounce 2s infinite;
 }
 
@@ -134,10 +135,10 @@ INDICE
 
 /* mobile (768px) */
 @media (max-width: 768px) {
-  .header-section h1 {
+  .hero-section h1 {
     font-size: 2rem;
   }
-  .header-section button {
+  .hero-section button {
     font-size: 1rem;
   }
 }
@@ -230,7 +231,7 @@ INDICE
   min-height: 100vh;
   font-family: "Sogo", sans-serif;
   color: #382f2d;
-  background: #382f2d;
+  background: #f1e8da; /*#382f2d; */
   border-radius: 10px;
   margin: auto;
 }
@@ -241,13 +242,13 @@ INDICE
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 50px;
-  color: white;
+
   border-bottom: 1px solid #f6f3f1;
   padding-bottom: 3px;
 }
 .eventi-section h4 {
-  color: white;
-  text-decoration: white underline;
+  color: #382f2d;
+  text-decoration: #382f2d underline;
 }
 
 /* 4.3 cards */
@@ -303,5 +304,75 @@ INDICE
     font-size: 1.2rem;
     text-align: center;
     padding-bottom: 20px;
+  }
+}
+
+/* 5.-------------------------GALLERY SECTION-------------------------
+5.1 general
+5.2 immagini
+5.3 titoli e testi
+5.4 Media Queries
+*/
+/* 5.1 general */
+.gallery-section {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: "Sogo", sans-serif;
+}
+.gallery-container-custom {
+  padding-left: 4vw !important;
+  padding-right: 4vw !important;
+}
+
+/* 5.2 immagini */
+.gallery-section img {
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #382f2d;
+}
+.gallery-section .row > div:first-child img {
+  width: 90%;
+  height: 80%;
+}
+.gallery-section .row > div:last-child img {
+  width: 100%;
+  height: 60%;
+  margin-top: 50px;
+}
+
+/* 5.3 titoli e testi */
+.gallery-section button {
+  background: rgba(244, 244, 242, 0.7);
+  backdrop-filter: blur(3px);
+  border: 1px solid #382f2d;
+  color: #382f2d;
+  font-size: 1.3rem;
+  padding: 10px 20px 5px 20px; /* padding irregolare x via del font */
+  letter-spacing: 0.24rem;
+  border-radius: 3px;
+  font-family: "Sogo", sans-serif;
+  margin-top: 30px;
+  display: flex;
+  margin-inline: auto;
+  margin-top: 30px;
+}
+
+/* 5.4 Media Queries */
+/* mobile (768px) */
+@media (max-width: 768px) {
+  .gallery-section .row > div:first-child img {
+    width: 100%;
+  }
+  .gallery-section .row > div:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-section .row > div:last-child button {
+    order: 2;
+  }
+  .gallery-section button {
+    margin-bottom: 30px;
+    font-size: 1em;
   }
 }

@@ -8,19 +8,22 @@ import homeImg from "../../Assets/Home/Isolotto-Pirgo-6.jpg";
 import antipastoDiMare from "../../Assets/Menu/Antipasto-di-pesce-scaled.jpg";
 import antipastoDiTerra from "../../Assets/Menu/antipasto-di-terra-invernale.jpg";
 import evento from "../../Assets/Eventi/8698644_06191135_fondazione_felicita_c_2024.03.20_mattinoa_81_2_.jpg";
+import gallerysect1 from "../../Assets/Home/Isolotto-Pirgo-8.jpg";
+import gallerysect2 from "../../Assets/Home/rf66-Isolotto-del-pirgo-9.jpg";
+import gallerysect3 from "../../Assets/Home/isolotto-del-pirgo-10.jpg";
 
 const Homepage = () => {
   return (
     <>
       {/* INDICE HTML
-    1. HEADER SECTION
+    1. HERO SECTION
     2. MENU SECTION
     3. EVENTI SECTION
     4. GALLERY SECTION
 
     */}
-      {/* --------1. HEADER SECTION------------- */}
-      <div className="header-section">
+      {/* --------1. HERO SECTION------------- */}
+      <div className="hero-section">
         <img src={homeImg} alt="" />
         <div className="title">
           <h1>ISOLOTTO DEL PIRGO</h1>
@@ -193,6 +196,29 @@ const Homepage = () => {
               <h4>Vedi Tutti Gli Eventi In Programma</h4>
             </a>
           </div>
+        </Container>
+      </div>
+      {/* -------4. GALLERY SECTION------------- */}
+      <div className="gallery-section pt-5">
+        <Container fluid className="gallery-container-custom">
+          <h1 className="text-center pb-5">Location</h1>
+          <Row c>
+            <Col xs={12} md={8}>
+              <img src={gallerysect3} alt="" />
+              <h3 className="text-center mt-5">Vista Mozzafiato</h3>
+            </Col>
+            <Col xs={12} md={4}>
+              <p className="mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Ipsa deleniti
+                amet esse. Consequuntur pariatur eaque dignissimos iusto ullam
+                unde fuga,
+              </p>
+              <hr />
+              <button>PRENOTA ORA</button>
+              <img src={gallerysect2} alt="" />
+            </Col>
+          </Row>
         </Container>
       </div>
     </>
