@@ -5,6 +5,7 @@ INDICE
 3. Menu section
 4. Eventi section
 5. Gallery section
+6. Footer section
 
 */
 
@@ -79,6 +80,12 @@ INDICE
   letter-spacing: 2px;
   font-weight: 300;
 }
+.hero-section h2 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
 
 /* 2.4 button prenota */
 .hero-section button {
@@ -140,6 +147,9 @@ INDICE
   }
   .hero-section button {
     font-size: 1rem;
+  }
+  .hero-section h2 {
+    font-size: 0.9rem;
   }
 }
 
@@ -375,4 +385,29 @@ INDICE
     margin-bottom: 30px;
     font-size: 1em;
   }
+}
+
+/* 6.-------------------------FOOTER SECTION-------------------------
+*/
+.footer-section {
+  background-color: #f6f3f1;
+  color: #382f2d;
+  padding: 40px 0;
+  font-family: "Sogo", sans-serif;
+  font-size: 0.95rem;
+  border-top: 1px solid #e0dcd8;
+}
+
+.footer-section a {
+  color: #382f2d;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav a {
+  margin: 0 8px;
 }

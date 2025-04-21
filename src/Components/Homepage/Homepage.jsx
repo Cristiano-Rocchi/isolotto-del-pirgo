@@ -20,12 +20,14 @@ const Homepage = () => {
     2. MENU SECTION
     3. EVENTI SECTION
     4. GALLERY SECTION
+    5. FOOTER SECTION
 
     */}
       {/* --------1. HERO SECTION------------- */}
       <div className="hero-section">
         <img src={homeImg} alt="" />
         <div className="title">
+          <h2>Un luogo unico. Un'esperienza indimenticabile</h2>
           <h1>ISOLOTTO DEL PIRGO</h1>
           <div className="scrolltxt-container">
             <h3>Prossima Apertura Maggio 2025</h3>
@@ -221,6 +223,34 @@ const Homepage = () => {
           </Row>
         </Container>
       </div>
+
+      {/* -------5. FOOTER SECTION------------- */}
+      <footer className="footer-section">
+        <Container>
+          <Row className="gy-4 align-items-center">
+            <Col xs={12} md={4} className="text-center text-md-start">
+              <p>
+                &copy; 2025 Isolotto del Pirgo <br /> Civitavecchia RM, Italia
+              </p>
+            </Col>
+            <Col xs={12} md={4} className="text-center">
+              <p className="footer-nav">
+                <a href="#menu">Menu</a> • <a href="#eventi">Eventi</a> •{" "}
+                <a href="#location">Contatti</a>
+              </p>
+            </Col>
+            <Col xs={12} md={4} className="text-center text-md-end">
+              <p>
+                <a href="mailto:info@isolottodelpirgo.it">
+                  info@isolottodelpirgo.it
+                </a>
+                <br />
+                <a href="tel:+390000000000">+39 338 787 6361</a>
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     </>
   );
 };
