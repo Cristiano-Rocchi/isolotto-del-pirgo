@@ -13,16 +13,17 @@ const Homepage = () => {
   return (
     <>
       {/* INDICE HTML
-    1. HEADER SECTION
+    1. HERO SECTION
     2. MENU SECTION
     3. EVENTI SECTION
     4. GALLERY SECTION
 
     */}
-      {/* --------1. HEADER SECTION------------- */}
-      <div className="header-section">
+      {/* --------1. HERO SECTION------------- */}
+      <div className="hero-section">
         <img src={homeImg} alt="" />
         <div className="title">
+          <h2>Un luogo unico. Un’esperienza indimenticabile.</h2>
           <h1>ISOLOTTO DEL PIRGO</h1>
           <div className="scrolltxt-container">
             <h3>Prossima Apertura Maggio 2025</h3>
