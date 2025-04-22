@@ -236,7 +236,7 @@ const Homepage = () => {
             <Col xs={12} md={4} className="text-center">
               <p className="footer-nav">
                 <a href="#menu">Menu</a> • <a href="#eventi">Eventi</a> •{" "}
-                <a href="#location">Contatti</a>
+                <a href="#">Contatti</a>
               </p>
             </Col>
             <Col xs={12} md={4} className="text-center text-md-end">
@@ -245,7 +245,7 @@ const Homepage = () => {
                   info@isolottodelpirgo.it
                 </a>
                 <br />
-                <a href="tel:+390000000000">+39 338 787 6361</a>
+                <a href="tel:+393387876361">+39 338 787 6361</a>
               </p>
             </Col>
           </Row>
