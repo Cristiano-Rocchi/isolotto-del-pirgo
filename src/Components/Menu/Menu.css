@@ -1,9 +1,10 @@
 /*
 INDICE CSS
 1. Generali
-2. Navbar superiore
+2. Navbar menu
 3. Categorie e prodotti
-4. Media queries
+4. Bottone Prenota
+5. Media queries
 */
 
 /* -----------------------------
@@ -15,8 +16,12 @@ INDICE CSS
 }
 
 /* -----------------------------
-  2. NAVBAR SUPERIORE
+  2. NAVBAR MENU
+  2.1 generali
+  2.2 bottoni
   ----------------------------- */
+
+/* 2.1 generali */
 .menu-navbar {
   position: sticky;
   top: 0;
@@ -29,6 +34,7 @@ INDICE CSS
   border-bottom: 1px solid #e0e0e0;
 }
 
+/* 2.2 bottoni */
 .menu-navbar button {
   background: none;
   border: none;
@@ -48,22 +54,32 @@ INDICE CSS
 
 /* -----------------------------
   3. CATEGORIE E PRODOTTI
+  3.1 generali
+  3.2 titoli e descrizioni
+  3.3 immagini
   ----------------------------- */
+
+/* 3.1 generali */
 .menu-category {
   padding: 40px 10px;
 }
-
-.menu-category h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  text-align: left;
-  color: #222;
-}
-
 .menu-item {
   margin-bottom: 25px;
   border-bottom: 1px solid #eee;
   padding-bottom: 15px;
+  display: flex;
+  gap: 40px;
+}
+.menu-item div {
+  margin-block: auto;
+}
+/* 3.2 titoli e descrizioni */
+.menu-category h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #382f2d;
 }
 
 .menu-item h4 {
@@ -78,8 +94,35 @@ INDICE CSS
   color: #555;
 }
 
+/* 3.3 immagini */
+
+.menu-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 /* -----------------------------
-  4. MEDIA QUERIES (mobile)
+  4. BOTTONE PRENOTA
+  ----------------------------- */
+.menu-page .menu-foot {
+  display: flex;
+}
+.menu-page .menu-foot button {
+  margin: auto;
+  background: rgba(244, 244, 242, 0.7);
+  backdrop-filter: blur(3px);
+  border: 1px solid #382f2d;
+  color: #382f2d;
+  font-size: 1.3rem;
+  padding: 10px 20px 5px 20px; /* padding irregolare x via del font */
+  letter-spacing: 0.24rem;
+  border-radius: 3px;
+}
+
+/* -----------------------------
+  5. MEDIA QUERIES (mobile)
   ----------------------------- */
 @media (max-width: 768px) {
   .menu-navbar {
@@ -91,10 +134,17 @@ INDICE CSS
   .menu-category h2 {
     font-size: 1.3rem;
   }
+  .menu-item img {
+    width: 150px;
+    height: 150px;
+  }
   .menu-item h4 {
     font-size: 1rem;
   }
   .menu-item p {
+    font-size: 0.9rem;
+  }
+  .menu-page .menu-foot button {
     font-size: 0.9rem;
   }
 }

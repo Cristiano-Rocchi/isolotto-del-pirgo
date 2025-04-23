@@ -8,7 +8,6 @@ import homeImg from "../../Assets/Home/Isolotto-Pirgo-6.jpg";
 import antipastoDiMare from "../../Assets/Menu/Antipasto-di-pesce-scaled.jpg";
 import antipastoDiTerra from "../../Assets/Menu/antipasto-di-terra-invernale.jpg";
 import evento from "../../Assets/Eventi/8698644_06191135_fondazione_felicita_c_2024.03.20_mattinoa_81_2_.jpg";
-import gallerysect1 from "../../Assets/Home/Isolotto-Pirgo-8.jpg";
 import gallerysect2 from "../../Assets/Home/rf66-Isolotto-del-pirgo-9.jpg";
 import gallerysect3 from "../../Assets/Home/isolotto-del-pirgo-10.jpg";
 
