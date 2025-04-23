@@ -1,0 +1,100 @@
+/*
+INDICE CSS
+1. Generali
+2. Navbar superiore
+3. Categorie e prodotti
+4. Media queries
+*/
+
+/* -----------------------------
+1. GENERALI
+----------------------------- */
+.menu-page {
+  padding: 20px;
+  font-family: "Sogo", sans-serif;
+}
+
+/* -----------------------------
+  2. NAVBAR SUPERIORE
+  ----------------------------- */
+.menu-navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-navbar button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  padding-bottom: 5px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.menu-navbar button.active {
+  color: #000;
+  border-bottom: 2px solid #f9b233;
+}
+
+/* -----------------------------
+  3. CATEGORIE E PRODOTTI
+  ----------------------------- */
+.menu-category {
+  padding: 40px 10px;
+}
+
+.menu-category h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #222;
+}
+
+.menu-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.menu-item h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.menu-item p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* -----------------------------
+  4. MEDIA QUERIES (mobile)
+  ----------------------------- */
+@media (max-width: 768px) {
+  .menu-navbar {
+    gap: 10px;
+  }
+  .menu-navbar button {
+    font-size: 0.95rem;
+  }
+  .menu-category h2 {
+    font-size: 1.3rem;
+  }
+  .menu-item h4 {
+    font-size: 1rem;
+  }
+  .menu-item p {
+    font-size: 0.9rem;
+  }
+}
