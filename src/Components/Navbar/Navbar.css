@@ -1,12 +1,85 @@
 /* INDICE
 1. Generali
-2. Testi
+2. Logo
+3. Testi
+4. Media Queries
 */
 
 /*  1. ---------------GENERALI------------------ */
 .navbar {
   background-color: transparent;
-  position: absolute;
+  position: fixed; /* <--- CAMBIA da absolute a fixed */
+  top: 0; /* <--- aggiungi */
+  left: 0; /* <--- aggiungi */
   width: 100%;
   z-index: 99999;
+}
+/* 2. ---------------LOGO------------------ */
+.navbar .navbar-brand {
+  font-family: "Adelia", sans-serif;
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* 3. ---------------TESTI------------------ */
+.navbar .navbar-nav .nav-link,
+.navbar h4 {
+  font-family: "Sogo", sans-serif;
+  color: white;
+}
+
+/* 4. ---------------MEDIA QUERIES------------------ */
+.offcanvas {
+  z-index: 9999999999;
+  background: #f6f3f1;
+}
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    order: 3;
+  }
+  .language {
+    margin: auto;
+  }
+  .offcanvas .nav-link {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Sogo", sans-serif;
+    border-bottom: 1px solid black;
+    width: 60%;
+    margin-inline: auto;
+  }
+  .navbar .logo {
+    font-size: 0.9rem;
+  }
+}
+
+/* Navbar normale */
+.navbar-custom {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar dopo scroll */
+.navbar-custom.navbar-scrolled {
+  background-color: #f6f3f1;
+}
+.navbar-custom.navbar-scrolled .logo,
+.navbar-custom.navbar-scrolled .nav-link,
+.navbar-custom.navbar-scrolled h4 {
+  color: black;
+}
+
+.hamburger-icon .line {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.navbar-custom.navbar-scrolled .hamburger-icon .line {
+  fill: black;
 }

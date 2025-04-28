@@ -4,3 +4,9 @@
   font-family: "Sogo";
   src: url("./Assets/Fonts/sogo-regular.otf") format("opentype");
 }
+
+/* Font per il logo */
+@font-face {
+  font-family: "Adelia";
+  src: url("./Assets/Fonts/adelia.otf") format("opentype");
+}
