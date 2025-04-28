@@ -1,0 +1,12 @@
+/* INDICE
+1. Generali
+2. Testi
+*/
+
+/*  1. ---------------GENERALI------------------ */
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+}
