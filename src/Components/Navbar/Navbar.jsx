@@ -1,30 +1,41 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import "./Navbar.css";
 
 const MyNavbar = () => {
+  // Hooks & States
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => {
+    const checkScroll = () => {
+      if (!isHome) {
+        setScrolled(true); // se NON siamo in home, sempre colorato SUBITO
+        return;
+      }
+
       const offset = window.scrollY;
-      if (offset > window.innerHeight / 3) {
+      if (offset > window.innerHeight / 2) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    checkScroll(); // ⬅️ chiamalo SUBITO appena monta
+    window.addEventListener("scroll", checkScroll);
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", checkScroll);
     };
-  }, []);
+  }, [isHome]);
 
   return (
     <>
       <Navbar
-        expand="lg"
+        expand="md"
         fixed="top"
         className={`navbar-custom ${scrolled ? "navbar-scrolled" : ""}`}
       >

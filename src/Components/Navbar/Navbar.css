@@ -1,18 +1,42 @@
 /* INDICE
-1. Generali
+1. Generali & Scroll Mode
 2. Logo
 3. Testi
 4. Media Queries
 */
 
-/*  1. ---------------GENERALI------------------ */
+/*  1. ---------------GENERALI & SCROLL MODE------------------ */
 .navbar {
-  background-color: transparent;
-  position: fixed; /* <--- CAMBIA da absolute a fixed */
-  top: 0; /* <--- aggiungi */
-  left: 0; /* <--- aggiungi */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 99999;
+}
+
+/* Navbar normale */
+.navbar-custom {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar dopo scroll */
+.navbar-custom.navbar-scrolled {
+  background-color: #f6f3f1;
+}
+.navbar-custom.navbar-scrolled .logo,
+.navbar-custom.navbar-scrolled .nav-link,
+.navbar-custom.navbar-scrolled h4 {
+  color: black;
+}
+
+.hamburger-icon .line {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.navbar-custom.navbar-scrolled .hamburger-icon .line {
+  fill: black;
 }
 /* 2. ---------------LOGO------------------ */
 .navbar .navbar-brand {
@@ -57,29 +81,4 @@
   .navbar .logo {
     font-size: 0.9rem;
   }
-}
-
-/* Navbar normale */
-.navbar-custom {
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-}
-
-/* Navbar dopo scroll */
-.navbar-custom.navbar-scrolled {
-  background-color: #f6f3f1;
-}
-.navbar-custom.navbar-scrolled .logo,
-.navbar-custom.navbar-scrolled .nav-link,
-.navbar-custom.navbar-scrolled h4 {
-  color: black;
-}
-
-.hamburger-icon .line {
-  fill: white;
-  transition: fill 0.3s ease;
-}
-
-.navbar-custom.navbar-scrolled .hamburger-icon .line {
-  fill: black;
 }

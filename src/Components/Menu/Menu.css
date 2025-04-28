@@ -13,6 +13,7 @@ INDICE CSS
 .menu-page {
   padding: 20px;
   font-family: "Sogo", sans-serif;
+  margin-top: 86px; /*  altezza navbar */
 }
 
 /* -----------------------------
@@ -24,7 +25,7 @@ INDICE CSS
 /* 2.1 generali */
 .menu-navbar {
   position: sticky;
-  top: 0;
+  top: 86px;
   background-color: #fff;
   z-index: 999;
   display: flex;
@@ -127,6 +128,7 @@ INDICE CSS
 @media (max-width: 768px) {
   .menu-navbar {
     gap: 10px;
+    top: 65px;
   }
   .menu-navbar button {
     font-size: 0.95rem;
