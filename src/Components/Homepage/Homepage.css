@@ -104,7 +104,7 @@ INDICE
 
 .hero-section .arrow-down-sect {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-60%);
 }
@@ -384,5 +384,64 @@ INDICE
   .gallery-section button {
     margin-bottom: 30px;
     font-size: 1em;
+  }
+}
+
+/* ---------------------
+6. CONTACT HOME SECTION (FISSA IN BASSO)
+---------------------- */
+.contact-home {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 6vh;
+  background-color: #d7cdc386;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.contact-home-content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #382f2d;
+  font-family: "Sogo", sans-serif;
+}
+
+.contact-home-content p {
+  font-size: 1.2rem;
+
+  margin: auto;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-icons p {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-home-content {
+    gap: 5px;
+  }
+  .contact-icons {
+    gap: 30px;
+  }
+  .contact-icons img {
+    width: 20px;
   }
 }

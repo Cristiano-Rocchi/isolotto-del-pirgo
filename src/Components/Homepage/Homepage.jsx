@@ -11,6 +11,11 @@ import evento from "../../Assets/Eventi/8698644_06191135_fondazione_felicita_c_2
 import gallerysect2 from "../../Assets/Home/rf66-Isolotto-del-pirgo-9.jpg";
 import gallerysect3 from "../../Assets/Home/isolotto-del-pirgo-10.jpg";
 
+//icons
+import whatsapp from "../../Assets/Icons/whatsapp.svg";
+import instagram from "../../Assets/Icons/instagram.svg";
+import phone from "../../Assets/Icons/phone.svg";
+
 const Homepage = () => {
   return (
     <>
@@ -221,6 +226,35 @@ const Homepage = () => {
             </Col>
           </Row>
         </Container>
+      </div>
+      {/* -------5. CONTACT SECTION------------- */}
+      <div className="contact-home">
+        <div className="contact-home-content">
+          <p>Contatti</p>
+          <div className="contact-icons">
+            <a
+              href="tel:+393387876361"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={phone} alt="" />
+            </a>
+            <a
+              href="https://wa.me/393387876361"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={whatsapp} alt="" />
+            </a>
+            <a
+              href="https://www.instagram.com/isolottodelpirgo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagram} alt="" />
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );
