@@ -15,6 +15,7 @@ import gallerysect3 from "../../Assets/Home/isolotto-del-pirgo-10.jpg";
 import whatsapp from "../../Assets/Icons/whatsapp.svg";
 import instagram from "../../Assets/Icons/instagram.svg";
 import phone from "../../Assets/Icons/phone.svg";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -36,7 +37,9 @@ const Homepage = () => {
           <div className="scrolltxt-container">
             <h3>Prossima Apertura Maggio 2025</h3>
           </div>
-          <button>PRENOTA UN TAVOLO</button>
+          <Link to="/prenota">
+            <button>PRENOTA UN TAVOLO</button>
+          </Link>
         </div>
         <div className="arrow-down-sect">
           <div id="scrollDown">
@@ -205,7 +208,7 @@ const Homepage = () => {
         </Container>
       </div>
       {/* -------4. GALLERY SECTION------------- */}
-      <div className="gallery-section pt-5">
+      <div id="gallery-section" className="gallery-section pt-5">
         <Container fluid className="gallery-container-custom">
           <h1 className="text-center pb-5">Location</h1>
           <Row c>

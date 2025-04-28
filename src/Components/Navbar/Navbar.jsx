@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import "./Navbar.css";
 
@@ -8,7 +8,9 @@ const MyNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
+  // Effects
   useEffect(() => {
     const checkScroll = () => {
       if (!isHome) {
@@ -32,6 +34,29 @@ const MyNavbar = () => {
     };
   }, [isHome]);
 
+  // Functions
+  const handleClose = () => setShowOffcanvas(false);
+  const handleShow = () => setShowOffcanvas(true);
+
+  const scrollToGallery = () => {
+    handleClose(); // chiude il menu
+
+    if (!isHome) {
+      Navigate("/"); // se non siamo in home, prima vai a home
+      setTimeout(() => {
+        const section = document.getElementById("gallery-section");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // aspetta che la home sia caricata
+    } else {
+      const section = document.getElementById("gallery-section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <>
       <Navbar
@@ -46,7 +71,7 @@ const MyNavbar = () => {
           </Navbar.Brand>
 
           {/* TOGGLE BUTTON */}
-          <Navbar.Toggle aria-controls="offcanvasNavbar">
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow}>
             <svg
               className="hamburger-icon"
               width="40"
@@ -66,14 +91,24 @@ const MyNavbar = () => {
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
               placement="end"
+              show={showOffcanvas}
+              onHide={handleClose}
             >
               <Offcanvas.Header closeButton></Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#home">&bull; Home</Nav.Link>
-                  <Nav.Link href="#menu">&bull; Menu</Nav.Link>
-                  <Nav.Link href="#chisiamo">&bull; Chi siamo</Nav.Link>
-                  <Nav.Link href="#contattaci">&bull; Contattaci</Nav.Link>
+                <Nav className="justify-content-end flex-grow-1 pe-3 navbar-links">
+                  <Nav.Link as={Link} to={"/"} onClick={handleClose}>
+                    <span className="mobile-bullet">&bull;</span> Home
+                  </Nav.Link>
+                  <Nav.Link as={Link} to={"/menu"} onClick={handleClose}>
+                    <span className="mobile-bullet">&bull;</span> Menu
+                  </Nav.Link>
+                  <Nav.Link onClick={() => scrollToGallery()}>
+                    <span className="mobile-bullet">&bull;</span> Chi siamo
+                  </Nav.Link>
+                  <Nav.Link href="tel:+393387876361" onClick={handleClose}>
+                    <span className="mobile-bullet">&bull;</span> Contattaci
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

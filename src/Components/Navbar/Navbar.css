@@ -51,6 +51,12 @@
   font-family: "Sogo", sans-serif;
   color: white;
 }
+.offcanvas-body .navbar-links {
+  gap: 100px;
+}
+.mobile-bullet {
+  display: none;
+}
 
 /* 4. ---------------MEDIA QUERIES------------------ */
 .offcanvas {
@@ -80,5 +86,12 @@
   }
   .navbar .logo {
     font-size: 0.9rem;
+  }
+  .offcanvas-body .navbar-links {
+    gap: 20px;
+  }
+  .mobile-bullet {
+    display: inline-block;
+    margin-right: 5px; /* spazio tra il bullet e il testo */
   }
 }
