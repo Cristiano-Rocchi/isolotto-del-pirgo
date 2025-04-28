@@ -1,0 +1,67 @@
+/* INDICE
+1. Generali
+2. Titoli e descrizioni
+3. Bottoni
+4. Media Queries
+*/
+
+/* 1. ----------------------------- GENERALI ----------------------------- */
+.prenota-page {
+  padding: 20px;
+  font-family: "Sogo", sans-serif;
+  margin-top: 86px; /* altezza navbar */
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* 2. ----------------------------- TITOLI E DESCRIZIONI ----------------------------- */
+.prenota-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #382f2d;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.prenota-description {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* 3. ----------------------------- BOTTONI ----------------------------- */
+.prenota-button {
+  background: rgba(244, 244, 242, 0.7);
+  backdrop-filter: blur(3px);
+  border: 1px solid #382f2d;
+  color: #382f2d;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  letter-spacing: 0.1rem;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prenota-button:hover {
+  background-color: #f6f3f1;
+}
+
+/* 4. ----------------------------- MEDIA QUERIES ----------------------------- */
+@media (max-width: 768px) {
+  .prenota-title {
+    font-size: 1.7rem;
+  }
+
+  .prenota-description {
+    font-size: 0.95rem;
+  }
+
+  .prenota-button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}

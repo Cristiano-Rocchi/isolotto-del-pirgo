@@ -4,6 +4,7 @@ import Homepage from "./Components/Homepage/Homepage";
 import Menu from "./Components/Menu/Menu";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
+import Prenota from "./Components/Prenota/Prenota";
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/prenota" element={<Prenota />} />
       </Routes>
       <Footer />
     </BrowserRouter>
