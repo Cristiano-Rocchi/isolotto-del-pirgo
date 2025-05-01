@@ -66,9 +66,11 @@ const MyNavbar = () => {
       >
         <Container>
           {/* LOGO */}
-          <Navbar.Brand href="#home" className="logo">
-            Isolotto <br /> Del Pirgo
-          </Navbar.Brand>
+          <Link to={"/"}>
+            <Navbar.Brand className="logo">
+              Isolotto <br /> Del Pirgo
+            </Navbar.Brand>
+          </Link>
 
           {/* TOGGLE BUTTON */}
           <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow}>
@@ -114,7 +116,7 @@ const MyNavbar = () => {
             </Navbar.Offcanvas>
           </div>
 
-          <h4 className="language">IT</h4>
+          <h4 className="language">ITA</h4>
         </Container>
       </Navbar>
     </>

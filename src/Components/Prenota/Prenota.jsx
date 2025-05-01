@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Prenota.css";
 
 const Prenota = () => {
@@ -9,6 +9,9 @@ const Prenota = () => {
   const handleCallClick = () => {
     window.location.href = "tel:+393387876361";
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="prenota-page">

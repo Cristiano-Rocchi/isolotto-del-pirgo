@@ -44,6 +44,9 @@
   color: white;
   letter-spacing: 3px;
 }
+.navbar a {
+  text-decoration: none;
+}
 
 /* 3. ---------------TESTI------------------ */
 .navbar .navbar-nav .nav-link,

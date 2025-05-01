@@ -32,6 +32,10 @@ const Menu = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // -----------------------------
   // 3. SCROLL TO SECTION
   // -----------------------------
