@@ -42,6 +42,30 @@ INDICE
     transform: translateY(5px);
   }
 }
+/*4 scroll Home Elements */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.left {
+  transform: translateX(-30px);
+}
+
+.animate-on-scroll.right {
+  transform: translateX(30px);
+}
+
+.animate-on-scroll.in-view.left,
+.animate-on-scroll.in-view.right {
+  transform: translateX(0);
+}
 
 /* 2.---------------------HERO SECTION------------------------- */
 /* 2.1 general */

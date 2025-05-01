@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Homepage.css";
 import { Col, Container, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,6 +18,29 @@ import phone from "../../Assets/Icons/phone.svg";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
+  //Animazione allo scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      {
+        threshold: 0.2, // scatta quando almeno il 20% è visibile
+      }
+    );
+
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <>
       {/* INDICE HTML
@@ -69,13 +92,13 @@ const Homepage = () => {
       */}
       <div className="menu-section">
         <Container>
-          <h1>&bull; Menu &bull;</h1>
+          <h1 className="animate-on-scroll">&bull; Menu &bull;</h1>
 
           {/* 2.1 PIATTI */}
           <Row className="g-4">
-            <h3>I Nostri Piatti</h3>
+            <h3 className="animate-on-scroll">I Nostri Piatti</h3>
             <Col xs={12} md={6}>
-              <div className="card-menu">
+              <div className="card-menu animate-on-scroll left">
                 {" "}
                 <img src={antipastoDiMare} alt="Antipasto Di Mare" />
                 <div className="card-text">
@@ -89,7 +112,7 @@ const Homepage = () => {
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <div className="card-menu">
+              <div className="card-menu animate-on-scroll right">
                 <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
 
                 <div className="card-text">
@@ -108,7 +131,7 @@ const Homepage = () => {
             <h3>I Nostri Vini</h3>
             <Col xs={12} md={4}>
               {" "}
-              <div className="card-menu">
+              <div className="card-menu animate-on-scroll left">
                 <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
 
                 <div className="card-text">
@@ -122,7 +145,7 @@ const Homepage = () => {
             </Col>
             <Col xs={12} md={4}>
               {" "}
-              <div className="card-menu">
+              <div className="card-menu animate-on-scroll right">
                 <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
 
                 <div className="card-text">
@@ -136,7 +159,7 @@ const Homepage = () => {
             </Col>
             <Col xs={12} md={4}>
               {" "}
-              <div className="card-menu">
+              <div className="card-menu animate-on-scroll left">
                 <img src={antipastoDiTerra} alt="Antipasto Di Terra" />
 
                 <div className="card-text">
@@ -211,15 +234,17 @@ const Homepage = () => {
 
       <div id="gallery-section" className="gallery-section pt-5">
         <Container fluid className="gallery-container-custom">
-          <h1 className="text-center pb-5">&bull; Location &bull;</h1>
+          <h1 className="text-center pb-5 animate-on-scroll">
+            &bull; Location &bull;
+          </h1>
           <Row>
             <Col xs={12} md={8}>
               {" "}
               <h3 className="text-center mb-3">Vista Mozzafiato</h3>
-              <img src={gallerysect3} alt="" />
+              <img src={gallerysect3} alt="" className="animate-on-scroll" />
             </Col>
             <Col xs={12} md={4} className="mb-5">
-              <p className="mt-5">
+              <p className="mt-5 animate-on-scroll right">
                 L'Isolotto del Pirgo è un angolo esclusivo affacciato sul mare
                 di Civitavecchia, perfetto per chi cerca relax e atmosfera
                 suggestiva. Aperto per tutta la stagione estiva, il locale offre
@@ -230,15 +255,15 @@ const Homepage = () => {
               </p>
               <hr />
               <Link to={"/prenota"}>
-                <button>PRENOTA ORA</button>
+                <button className="animate-on-scroll">PRENOTA ORA</button>
               </Link>
 
-              <img src={gallerysect2} alt="" />
+              <img src={gallerysect2} alt="" className="animate-on-scroll" />
             </Col>
           </Row>
           <hr />
           <Row className="mt-5 mb-5 align-items-center">
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="animate-on-scroll left">
               <h4 className="text-center fw-bold">
                 Ci trovi a Civitavecchia (RM)
               </h4>
@@ -250,7 +275,7 @@ const Homepage = () => {
               </p>
             </Col>
             <Col xs={12} md={6}>
-              <div className="location-map-wrapper">
+              <div className="location-map-wrapper animate-on-scroll right">
                 <iframe
                   title="Mappa Civiltavecchia"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.801565624074!2d11.79435181541884!3d42.09635707920598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1328b5240d926d21%3A0x7e2a66a7a3eb1f88!2sVia%20Duca%20d'Aosta%2C%2020%2C%2005300%20Civitavecchia%20RM!5e0!3m2!1sit!2sit!4v1683301478632!5m2!1sit!2sit"
