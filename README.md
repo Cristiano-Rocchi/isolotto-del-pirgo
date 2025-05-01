@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# 🌊 Isolotto del Pirgo - Sito Ufficiale
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Benvenuto nel repository del sito ufficiale dell'**Isolotto del Pirgo**, un locale esclusivo situato a Civitavecchia (RM), affacciato sul mare e aperto durante tutta la stagione estiva.
 
-## Available Scripts
+Il sito è stato progettato e realizzato seguendo le indicazioni dirette del cliente, con particolare attenzione all’usabilità e allo stile visivo, ispirato ai migliori siti mondiali di ristorazione e hospitality.
 
-In the project directory, you can run:
+👉 **Sito online:**  
+https://isolotto-del-pirgo.vercel.app
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Funzionalità principali
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔥 **Design moderno e responsive**: perfettamente adattabile su desktop, tablet e smartphone.
+- 🍽️ **Menu interattivo**: la pagina del menu offre una navigazione fluida tra le categorie (Antipasti, Bevande) grazie a una **navbar dinamica** che segue lo scroll e permette di saltare facilmente da una sezione all’altra.
+- 📅 **Eventi**: sezione dedicata agli eventi organizzati dal locale.
+- 🗺️ **Gallery & Mappa**: immagini ad alta qualità e mappa interattiva per raggiungere la location facilmente.
+- 🛎️ **Prenotazioni**: possibilità di prenotare direttamente dal sito tramite la sezione dedicata.
+- 🎯 **Animazioni professionali**: animazioni leggere e non invasive attivate allo scroll per migliorare l’esperienza utente.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologie utilizzate
 
-### `npm run build`
+- **React.js**
+- **React Router DOM**
+- **Bootstrap & React-Bootstrap**
+- **CSS3 (custom styling + animazioni)**
+- **IntersectionObserver API (per animazioni on-scroll)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Struttura progetto (principale)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## /src /Assets /Components - Homepage.jsx - Menu.jsx - Footer.jsx - Navbar.jsx /Styles - Homepage.css - Menu.css - Footer.css - Navbar.css App.jsx index.js
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ▶️ Come eseguire il progetto localmente
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1️⃣ **Clona il repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/tuo-username/isolotto-del-pirgo.git
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2️⃣ **Vai nella cartella del progetto:**
 
-## Learn More
+```bash
+cd isolotto-del-pirgo
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3️⃣ **Installa le dipendenze:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+4️⃣ **Avvia l'ambiente di sviluppo:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Il sito sarà visibile su `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📸 Screenshot
 
-### Making a Progressive Web App
+### Homepage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="center">
+  <img src="./src/ScreenRDME/HomePc.png" alt="Homepage Desktop" width="45%"/>
+  <img src="./src/ScreenRDME/homeResp.png" alt="Homepage Mobile" width="45%"/>
+</p>
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Sezione Menu
 
-### Deployment
+![Menu Screenshot](./src/ScreenRDME/menuResp.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### Prenota
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Prenota Screenshot](./src/ScreenRDME/PrenotaPc.png)
+
+## 👨‍💻 Sviluppatore
+
+Sito realizzato da Cristiano Rocchi come progetto professionale su richiesta del cliente.  
+Per info o collaborazioni:
+
+- 📧 Email: cri.wklavoro@libero.it
+- 💼 GitHub: [tuo-username](https://github.com/Cristiano-Rocchi)

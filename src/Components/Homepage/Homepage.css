@@ -123,7 +123,6 @@ INDICE
   border-radius: 3px;
   font-family: "Sogo", sans-serif;
   margin-top: 30px;
-  display: none;
 }
 /* 2.5 button scorri */
 
@@ -153,6 +152,7 @@ INDICE
 .scrolltxt-container {
   overflow: hidden;
   white-space: nowrap;
+  display: none;
 }
 
 .scrolltxt-container h3 {
