@@ -79,7 +79,7 @@ Il sito sarà visibile su `http://localhost:3000`.
 
 <p align="center">
   
-  <img src="./ScreenRDME/homeResp.png" alt="Homepage Mobile" width="45%"/>
+  <img src="./ScreenRDME/menuResp.png" alt="Homepage Mobile" width="45%"/>
 </p>
 
 ---
@@ -88,7 +88,7 @@ Il sito sarà visibile su `http://localhost:3000`.
 
 <p align="center">
   
-  <img src="./ScreenRDME/prenotaPc.png" alt="Homepage Mobile" width="45%"/>
+  <img src="./ScreenRDME/prenotaPc.png" alt="Homepage Mobile"/>
 </p>
 
 ## 👨‍💻 Sviluppatore
