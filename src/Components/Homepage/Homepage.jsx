@@ -35,7 +35,7 @@ const Homepage = () => {
           <h2>Un luogo unico. Un'esperienza indimenticabile</h2>
           <h1>ISOLOTTO DEL PIRGO</h1>
           <div className="scrolltxt-container">
-            <h3>Prossima Apertura Maggio 2025</h3>
+            <h3>Prossima Apertura Estate 2025</h3>
           </div>
           <Link to="/prenota">
             <button>PRENOTA UN TAVOLO</button>
