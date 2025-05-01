@@ -69,7 +69,7 @@ Il sito sarà visibile su `http://localhost:3000`.
 ### Homepage
 
 <p align="center">
-  <img src="./ScreenRDME/HomePc.png" alt="Homepage Desktop" width="45%"/>
+  
   <img src="./ScreenRDME/homeResp.png" alt="Homepage Mobile" width="45%"/>
 </p>
 
@@ -77,13 +77,19 @@ Il sito sarà visibile su `http://localhost:3000`.
 
 ### Sezione Menu
 
-![Menu Screenshot](./ScreenRDME/menuResp.png)
+<p align="center">
+  
+  <img src="./ScreenRDME/homeResp.png" alt="Homepage Mobile" width="45%"/>
+</p>
 
 ---
 
 ### Prenota
 
-![Prenota Screenshot](./ScreenRDME/PrenotaPc.png)
+<p align="center">
+  
+  <img src="./ScreenRDME/prenotaPc.png" alt="Homepage Mobile" width="45%"/>
+</p>
 
 ## 👨‍💻 Sviluppatore
 
